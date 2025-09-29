@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beatflow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Chango&family=Limelight&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header id="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="../assets/logo/mundo blanco.png" alt="logo-beat"></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cards.html">Cursos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Galería</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Sobre...
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="nosotros.html">Nosotros</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex flex-grow-1 justify-content-center align-items-center">
+                        <h2 class="navbar-title">SEGUINOS EN NUESTRAS PLATAFORMAS...</h2><i
+                            class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                    <div class="platform-icons">
+                        <div class="d-flex platform-icons ms-auto">
+                            <a href="https://open.spotify.com" target="_blank"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://music.apple.com" target="_blank"><i class="fa-brands fa-apple"></i></a>
+                        </div>
+                    </div>
+                </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div id="descripcion" class="cuadrado">
+                <h1 id="titulo-principal" class="titulo">
+                    <span>¡BEAT</span>
+                    <span class="flow">FLOW</span>
+                    <span class="music">MUSIC!</span>
+                </h1>
+                <p>
+                    Beat Flow Music es el punto de encuentro entre ritmo, estilo y expresión. Somos cultura en
+                    movimiento, donde la música se mezcla con el diseño, el color y la vibra de la calle. Acá no
+                    solo se escucha: se siente, se ve, se vive. Cada beat, cada trazo, cada idea tiene actitud. Creamos
+                    arte que habla, que conecta, que representa. Si lo tuyo es fluir con tu esencia y romper moldes,
+                    este es tu lugar.
+                </p>
+            </div>
+            <div id="playlist" class="video-container">
+                <h2 class="playlist-title">Escuchá lo mejor del momento</h2>
+                <h3 class="click">¡Dale click!</h3>
+                <iframe class="playlist animar-playlist" style="border-radius:12px"
+                    src="https://open.spotify.com/embed/album/0H19f4rQEClTmLyH7HTimt?utm_source=generator" width="100%"
+                    height="352" frameborder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+            </div>
+        </section>
+        </section>
+    </main>
+    <div class="fade-into-footer"></div>
+    <footer id="footer" class="footer">
+        <section class="footer-logo">
+            <img src="../assets/logo/mundo blanco.png" alt="Beat Flow Logo">
+        </section>
+
+        <section class="footer-phrase frase-esencia">
+            Fluí con tu esencia. Beat Flow Music te acompaña.
+        </section>
+
+        <section class="footer-social">
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        </section>
+
+        <section id="contacto" class="footer-subscribe">
+            <p>¿Querés recibir novedades y playlists exclusivas?</p>
+            <input type="email" placeholder="Tu correo electrónico">
+            <button>Subscribe</button>
+        </section>
+
+        <section class="footer-credit">
+            Diseñado con flow, pasión y arte © 2025
+        </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

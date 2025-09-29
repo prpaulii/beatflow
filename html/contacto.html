@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../Css/contacto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins&family=Limelight&display=swap"
+        rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="menu-hamburguesa">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
+
+            <ul class="menu-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cards.html">Cursos</a></li>
+                <li><a href="gallery.html">Galería</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="formulario" class="contacto-section">
+            <h1 class="contacto-titulo">Formulario de contacto</h1>
+            <p class="contacto-descripcion">Completá tus datos para sumarte a Beat Flow Music o hacer una consulta.</p>
+
+            <form class="formulario-contacto">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="contact@mail.com" required>
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej: 11 2345 6789" required>
+
+                <label for="comentario">Comentario</label>
+                <textarea id="comentario" name="comentario" rows="5" placeholder="Escribí tu mensaje..."
+                    required></textarea>
+
+                <label for="interes">¿Qué te interesa?</label>
+                <select id="interes" name="interés" required>
+                    <option value="Seleccion">Seleccioná una opción</option>
+                    <option value="curso">Curso de canto</option>
+                    <option value="curso">Curso de baile</option>
+                    <option value="curso">Curso de instrumentos</option>
+                    <option value="curso">Curso de percusión</option>
+                    <option value="consulta">Consulta general</option>
+                </select>
+
+                <fieldset>
+                    <legend>¿Querés recibir novedades?</legend>
+                    <div class="radio-group">
+                        <label><input type="radio" name="novedades" value="si" required> Sí</label>
+                        <label><input type="radio" name="novedades" value="no"> No</label>
+                    </div>
+                </fieldset>
+
+                <div class="botones-formulario">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Resetear</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer-flex">
+        <div class="footer-logo">
+            <img src="../assets/logo/mundo blanco.png" alt="Logo Beat Flow Music">
+        </div>
+
+        <div class="footer-info">
+            <p class="footer-nombre">Beat Flow Music</p>
+            <p class="footer-slogan">Fluí con tu esencia</p>
+            <p class="footer-contacto">
+                📧 <a href="mailto:contacto@beatflow.com">contacto@beatflow.com</a><br>
+                📍 Laprida 70, San Isidro, Buenos Aires<br>
+                📞 +54 11 2183 1275
+            </p>
+            <div class="whatsapp-footer">
+                <a href="https://wa.me/541121831275" target="_blank" aria-label="WhatsApp Beat Flow">
+                    <img src="../assets/Icons/Whatsapp-icons.png" alt="WhatsApp" class="whatsapp-icon">
+                </a>
+            </div>
+        </div>
+        <a href="index.html" class="boton-inicio">Inicio</a>
+    </footer>
+</body>
+
+</html>
