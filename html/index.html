@@ -92,11 +92,14 @@
             <div id="playlist" class="video-container">
                 <h2 class="playlist-title">Escuchá lo mejor del momento</h2>
                 <h3 class="click">¡Dale click!</h3>
-                <iframe class="playlist animar-playlist" style="border-radius:12px"
-                    src="https://open.spotify.com/embed/album/0H19f4rQEClTmLyH7HTimt?utm_source=generator" width="100%"
-                    height="352" frameborder="0" allowfullscreen=""
+
+
+                <iframe class="playlist animar-playlist" data-testid="embed-iframe" style="border-radius:12px"
+                    src="https://open.spotify.com/embed/album/0H19f4rQEClTmLyH7HTimt?utm_source=generator&theme=0"
+                    width="100%" height="352" frameBorder="0" allowfullscreen=""
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
                 </iframe>
+            </div>
             </div>
         </section>
         </section>
@@ -127,7 +130,11 @@
         <section class="footer-credit">
             Diseñado con flow, pasión y arte © 2025
         </section>
+        <div class="footer-container">
+            <p>Creado por Paula Russo</p>
+        </div>
     </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
