@@ -2,9 +2,6 @@
     padding: 0;
     margin: 0;
 }
-html {
-  scroll-behavior: smooth;
-}
 
 .limelight-regular {
     font-family: "Limelight", sans-serif;
@@ -15,27 +12,35 @@ html {
 
 /* ESTILOS EN EL BODY (toda la pagina) */
 
-body {
-    margin: 0;
-    background-image: url(../assets/img/urban\ 6.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    font-family: "Limelight", sans-serif;
-    position: relative;
-    z-index: 0;
+html {
+  scroll-behavior: smooth;
+  background-image: url("../assets/img/urban6.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100%;
 }
 
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  font-family: "Limelight", sans-serif;
+  position: relative;
+  z-index: 0;
   cursor: grab;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* ESTILOS EN EL HEADER (ej: nav, h1 ) */
 
 .navbar {
     height: 60px;          
-    overflow: visible;     
+    overflow: visible; 
+    position: relative;
+    z-index: 20;
+    
 }
 
 .navbar-brand .logo {
@@ -69,8 +74,9 @@ body {
 
 .navbar{
     display: flex;
-    
-}
+    position: relative;
+    z-index: 20;
+} 
 
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
     color: rgb(28, 67, 67);
@@ -155,14 +161,14 @@ p {
     max-width: 450px;         
 }
 
-.titulo {
-  font-size: 4rem;
-  font-weight: 300; 
-  line-height: 1.2;
-  color: white;
-  margin: 14px;
-  letter-spacing: 1px; 
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); 
+  .titulo {
+    font-size: 4rem;
+    font-weight: 300; 
+    line-height: 1.2;
+    color: white;
+    margin: 14px;
+    letter-spacing: 1px; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); 
 }
 
 .titulo span {
@@ -290,15 +296,14 @@ p {
 /* FOOTER */
 
 .footer {
-  background: linear-gradient(to top, rgba(13,13,13,0.9), rgba(0,0,0,0.5), transparent);
+  background-color: rgba(0, 0, 0, 0.85);
   color: #ccc;
   padding: 40px 20px;
   text-align: center;
   font-family: 'Audiowide', sans-serif;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  animation: fadeInFooter 2s ease forwards;
-  opacity: 0;
+  border-top: 1px solid rgba(250, 249, 249, 0.716);
   position: relative;
+  padding-bottom: 70px;
 }
 
 @keyframes fadeInFooter {
@@ -350,7 +355,7 @@ p {
 }
 
 .footer-social a {
-  color: #000000;
+  color: #ffffff;
   margin: 0 10px;
   font-size: 1.6rem;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -369,7 +374,7 @@ p {
 .footer-subscribe p {
   margin-bottom: 10px;
   font-size: 0.95rem;
-  color: #030303;
+  color: #ffffff;
 }
 
 .footer-subscribe input {
@@ -408,6 +413,7 @@ p {
   transform: translateY(30px);
   animation: aparecerPlaylist 1.2s ease-out forwards;
   animation-delay: 1.2s; 
+  box-shadow: 0 0 15px #00cfff, 0 0 25px #ff5e7e;
 }
 
 @keyframes aparecerPlaylist {
@@ -415,10 +421,6 @@ p {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.animar-playlist {
-  box-shadow: 0 0 15px #00cfff, 0 0 25px #ff5e7e;
 }
 
 /*  RESPONSIVE */
@@ -471,7 +473,7 @@ p {
 .fade-into-footer {
   height: 120px;
   width: 100%;
-  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.8));
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.166), rgba(0, 0, 0, 0.8));
   margin-top: -120px;
   z-index: 2;
   position: relative;
@@ -487,23 +489,36 @@ p {
   color: white;
 }
 
-.footer-container {
-  border-top: 1px solid rgba(255, 255, 255, 0.2); 
-  margin: 40px 0; 
-  padding-top: 20px;
-  text-align: center;
-  font-family: 'Poppins', sans-serif; 
-  font-size: 15px;
-  color: #ccc;
-  letter-spacing: 1px;
-}
 
-
-.footer-container {
+.footer-bottom-credit {
   opacity: 0;
   transform: translateY(10px);
   animation: fadeInUp 1s ease forwards;
   animation-delay: 1.5s;
+}
+
+.footer-bottom-credit {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 0;
+  font-size: 0.75rem;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.09);
+  border-top: 1px solid rgba(238, 234, 234, 0.5);
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+.footer {
+  position: relative;
+  padding-bottom: 70px; 
+
 }
 
 @keyframes fadeInUp {
@@ -513,4 +528,225 @@ p {
   }
 }
 
+@media (max-width: 768px) {
+  .playlist {
+    height: 250px; 
+  }
 
+  #playlist {
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    margin-bottom: 0;
+  }
+
+  .hero {
+    padding-bottom: 0;
+  }
+}
+
+main {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar-collapse {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  z-index: 10;
+  border-top: 2px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transform: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  font-weight: bold;
+  text-shadow: 0 0 5px #000000;
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+  filter: brightness(10); 
+}
+
+/* Efecto de fade + slide al desplegar */
+
+.navbar-collapse.collapse {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.navbar-collapse.collapse.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación de los links al aparecer */
+
+.navbar-nav .nav-link {
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: fadeInLink 0.5s forwards;
+  animation-delay: 0.3s;
+  color: #ffffff !important;
+  font-weight: bold;
+  text-shadow: 0 0 5px #000000;
+}
+
+@keyframes fadeInLink {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Glow urbano en el fondo del menú */
+
+.navbar-collapse {
+  box-shadow: 0 0 20px #00cfff, 0 0 40px #ff5e7e;
+}
+
+/* Efecto de fade + slide al desplegar */
+
+.navbar-collapse.collapse {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.navbar-collapse.collapse.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación escalonada de los links */
+
+.navbar-nav .nav-link {
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: fadeInLink 0.5s forwards;
+  color: #ffffff !important;
+  font-weight: bold;
+  text-shadow: 0 0 5px #000000;
+}
+
+.navbar-nav .nav-link:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.navbar-nav .nav-link:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.navbar-nav .nav-link:nth-child(3) {
+  animation-delay: 0.7s;
+}
+.navbar-nav .nav-link:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+@keyframes fadeInLink {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hover con vibración sutil */
+
+.navbar-nav .nav-link:hover {
+  animation: vibrar 0.2s linear infinite;
+}
+
+@keyframes vibrar {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-1px); }
+  50% { transform: translateX(1px); }
+  75% { transform: translateX(-1px); }
+  100% { transform: translateX(0); }
+}
+
+/* Glow dinámico en el ícono hamburguesa */
+
+.navbar-toggler-icon {
+  filter: drop-shadow(0 0 5px #00cfff) drop-shadow(0 0 10px #ff5e7e);
+  animation: pulsoGlow 1.5s infinite ease-in-out;
+}
+
+@keyframes pulsoGlow {
+  0% { filter: drop-shadow(0 0 5px #00cfff) drop-shadow(0 0 10px #ff5e7e); }
+  50% { filter: drop-shadow(0 0 10px #00cfff) drop-shadow(0 0 20px #ff5e7e); }
+  100% { filter: drop-shadow(0 0 5px #00cfff) drop-shadow(0 0 10px #ff5e7e); }
+}
+
+/* Modo escritorio (desde 992px en adelante) */
+
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 1 !important;
+    transform: none !important;
+    position: static !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+  }
+
+  .navbar-nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  .navbar-title {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-right: 20px;
+  }
+
+  .platform-icons {
+    display: flex;
+    gap: 15px;
+  }
+
+  .platform-icons i {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+}
+
+/* 📱 Modo móvil (hasta 991px) */
+@media (max-width: 991px) {
+  .navbar-collapse.collapse {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .navbar-collapse.collapse.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .navbar-collapse {
+    box-shadow: 0 0 20px #00cfff, 0 0 40px #ff5e7e;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    z-index: 10;
+  }
+}
